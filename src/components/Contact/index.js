@@ -25,8 +25,10 @@ const Contact = () => {
   return (
     <>
       <div className="container contact-page">
+        
         <div className="text-zone">
           <div className="contact-form">
+            
             <form ref={form} onSubmit={sendEmail}>
               <ul>
                 <li className="half">
