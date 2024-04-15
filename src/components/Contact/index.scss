@@ -1,0 +1,117 @@
+.text-zone{
+  top: 50%;
+  right: 20%;
+  left: 20%;
+
+}
+.contact-form {
+  ul {
+
+    li {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      margin-bottom: 10px;
+      opacity: 0;
+      overflow: hidden;
+      display: block;
+      clear: both;
+      position: relative;
+      animation: fadeInUp 2s 2s;
+      animation-fill-mode: forwards;
+    }
+
+    li.half {
+      width: 49%;
+      margin-left: 2%;
+      float: left;
+      clear: none;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  input[type='text'],
+  input[type='email'] {
+    width: 100%;
+    border: 0;
+    background: white;
+    height: 50px;
+    font-size: 16px;
+    color: #000000;
+    padding: 0 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+  }
+
+  textarea {
+    width: 100%;
+    border: 0;
+    background: white;
+    height: 50px;
+    font-size: 16px;
+    color: #000000;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 150px;
+    border-radius: 8px;
+  }
+
+  .flat-button {
+    color: #333;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-decoration: none;
+    padding: 8px 10px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background: 0 0;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 4px;
+    font-family: sans-serif;
+    text-decoration: none;
+    animation: fadeInAnimation 1s 1.8s backwards;
+    white-space: nowrap;
+  }
+}
+
+// .map-wrap and .leaflet-container styles remain unchanged
+
+.info-map {
+  position: absolute;
+  background: white;
+  // Adjusted positioning
+  top: 20px;
+  right: 20px;
+  z-index: 999999;
+  width: 150px;
+  padding: 20px;
+  color: #000000;
+  font-family: 'Helvetica';
+  font-size: 17px;
+  font-weight: 300;
+  opacity: 0;
+  animation: fadeIn 1s 1.5s;
+  animation-fill-mode: forwards;
+
+  span {
+    font-size: 16px;
+
+    span {
+      color: #000000;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .map-wrap {
+    float: none;
+    margin: 0;
+    width: 100%;
+    height: 400px;
+  }
+}
