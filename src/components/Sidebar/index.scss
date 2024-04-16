@@ -1,11 +1,14 @@
 .nav-bar {
     background: white;
+    width: 100%;
+    max-width: 60px;
     width: 60px;
     height: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     z-index: 3;
     min-height: 500px;
+    overflow: auto;
 
     .logo{
         display: block;
@@ -24,13 +27,19 @@
     }
 }
 
+@media (min-width: 600px) {
+    .nav-bar {
+        width: 60px;
+    }
+}
+
 nav {
     display: block;
     text-align: center;
-    position: absolute;
+    position: relative;
     height: 210px;
-    top: 50%;
-    margin-top: -120px;
+    top: 0;
+    margin-top: 0;
     width: 100%;
 
     a{
@@ -91,11 +100,25 @@ nav {
         }
     }
 
+    a.project-link{
+        &:after{
+            content: 'PROJECTS';
+        }
+    }
+
     a.active{
         svg{
-            color: gray;
+            color: #3a4920;;
         }
     }    
+}
+
+@media (min-width: 600px) {
+    nav {
+        position: absolute;
+        top: 50%;
+        margin-top: -120px;
+    }
 }
 
 ul{
@@ -116,8 +139,12 @@ ul{
                 line-height: 16px;
 
                 &:hover svg{
-                    color: gray;
+                    color: #3a4920;;
                 }
             }
         }
     }
+
+nav.mobile-show {
+    display: block; /* Ensure it's visible when active */
+}

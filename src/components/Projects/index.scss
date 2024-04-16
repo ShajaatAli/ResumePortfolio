@@ -1,11 +1,16 @@
-.text-zone{
-    top: 50%;
-  right: 20%;
-  left: 20%;
-}
 .projects-page{
-    
-}
-.git{
-        background-color: white;
+    .text-zone{
+      position: absolute;
+        left: 10%;
+        top: 50%;
+        width: 60%;
+        max-height: 90%;
     }
+    h1{
+        color:black;
+        font-size: 50px;
+        margin: 0;
+        font-family: 'Coolvetica';
+        font-weight: 400;
+    }
+}

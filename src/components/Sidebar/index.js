@@ -16,7 +16,7 @@ const Sidebar = () => {
         <Link className='logo' to='/'
             onClick={() => setShowNav(false)}>
             <img src={LogoS} alt="logo" />
-            <img className="sub-logo" src={LogoSubtitle} alt="slobodan" />
+            <img className="sub-logo" src={LogoSubtitle} alt="ali" />
         </Link>
         <nav className={showNav ? 'mobile-show' : ''}>
             <NavLink 
