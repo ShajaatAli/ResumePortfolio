@@ -1,12 +1,10 @@
-.home-page{
+.container{
     .text-zone{
         position: relative;
+        top: 10%;
         left: 10%;
-        top: 50%;
-        transform: translateY(-50%);
         width: 60%;
         max-height: 90%;
-        
         z-index: 2
     }
     h1{
@@ -15,19 +13,10 @@
         margin: 0;
         font-family: 'Coolvetica';
         font-weight: 400;
-
-        img {
-            margin-left: 20px;
-            opacity: 0;
-            width: 50px;
-            height: auto;
-            animation: rotateIn 1s linear both;
-            animation-delay: 1s;
-            }
     }
     h2{
         color: rgb(22, 24, 30);
-        margin-top: 20px;
+        margin-top: 0;
         font-weight: 400;
         font-size: 30px;
         font-family: 'Coolvetica';
@@ -44,12 +33,14 @@
         font-family: sans-serif;
         text-decoration: none;
         padding: 10px 10px;
-        margin: 25px;
+        margin: 0;
+        margin-top: 2%;
         border: 1px solid rgb(37, 33, 33) ;
         float: left;
         animation: fadeInAnimation 1s 1.8s backwards;
         white-space: nowrap;
         margin-left: 0px;
+        bottom: 70%;
 
         &:hover {
         background: #5c5a53;

@@ -80,7 +80,7 @@ const Home = () => {
     return (
         <>
             <StarrySky /> {/* This component renders the stars and should be behind the text */}
-            <div className="container home-page">
+            <div className="container">
                 <div className="text-zone">
                     <h1>
                         <span className={letterClass}>H</span>
@@ -94,8 +94,10 @@ const Home = () => {
                         <AnimatedLetters letterClass={letterClass} strArray={nameArray} idx={15} />
                         <br />
                     </h1>
-                    <h2>Computer Science Major / Gym & Health Advocate</h2>
-                    <Link to="/contact" className='flat-button'>CONTACT ME</Link>
+                    <h2>Computer Science Major / Gym & Health Advocate
+                        <Link to="/contact" className='flat-button'>CONTACT ME</Link>
+                    </h2>
+
                 </div>
             </div>
             <Loader type="pacman" />

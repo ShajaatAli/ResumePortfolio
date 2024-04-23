@@ -1,31 +1,42 @@
-.text-zone{
-        position: absolute;
-        top: 5%;
-        transform: translateY(-50%);
-        width: 60%;
-        max-height: 90%;
-    }
-    h1{
-        color:black;
-        font-size: 80px;
-        margin: 0;
-        font-family: 'Coolvetica';
-        font-weight: 400;
-    }
-    h2{
-        top: 100%;
-        color:black;
-        font-size: 40px;
-        margin: 0;
-        font-family: 'Coolvetica';
-        font-weight: 400;
-        width: 80%;
-        margin-bottom: 100%;
-    }
+.container {
+  display: flex; /* This enables flexbox layout which is great for positioning elements side by side */
+  flex-direction: row; /* Align children horizontally */
+  justify-content: center; /* Center the items horizontally */
+  align-items: center; /* Center the items vertically */
+  margin: auto;
+}
 
-    .shajaat{
-        width: 300;
-        height: 480;
-        margin-left: 68%;
-        margin-top: 5%;
-    }
+.shajaat {
+  width: 350px; /* Added px to specify units */
+  height: 480px; /* Added px to specify units */
+}
+
+.background {
+  display: flex;
+  min-height: 100vh;
+  align-items: center; /* Align vertically */
+}
+
+.text-zone {
+  max-width: 900px;
+  max-height: 290px;
+  position: relative;
+  width: 60%;
+  margin-left: 60px; /* Ensure there's some space between the text and the image */
+}
+
+.text-zone h1 {
+  color: black;
+  font-size: 80px;
+  margin: 0;
+  font-family: 'Coolvetica';
+  font-weight: 400;
+}
+
+.text-zone h2 {
+  color: black;
+  font-size: 40px;
+  margin: 0;
+  font-family: 'Coolvetica';
+  font-weight: 400;
+}

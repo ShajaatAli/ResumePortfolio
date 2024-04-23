@@ -5,12 +5,12 @@ const About = () => {
 
   return (
     <>
-      <div className="container about-page">
+    <div className = "background"> 
+      <div className="container">
         <img
         className="shajaat"
         src={shajaat}
-        alt="Shajaat with cat"
-      />
+        alt="Shajaat with cat"/>
 
         <div className="text-zone">
           <h1>
@@ -20,11 +20,12 @@ const About = () => {
             I am a first generation student with my family being from Pakistan. 
             I am very passionate about working out
             traveling and just enjoying life. 
-            I am currently a Computer Science Student at California State Univeristy, Sacramento  
+            I am currently a Computer Science Student at California State University, Sacramento  
           </h2>
         </div>
         
       </div>
+    </div>
     </>
   )
 }

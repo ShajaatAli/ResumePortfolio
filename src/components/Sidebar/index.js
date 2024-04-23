@@ -1,7 +1,6 @@
 import './index.scss'
 import { useState } from 'react'
 import LogoS from '../../assets/images/logo-s.png'
-import LogoSubtitle from '../../assets/images/logo_sub.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faEnvelope, faHome, faUser, faHammer} from '@fortawesome/free-solid-svg-icons'
 import { Link, NavLink } from 'react-router-dom'
@@ -16,7 +15,6 @@ const Sidebar = () => {
         <Link className='logo' to='/'
             onClick={() => setShowNav(false)}>
             <img src={LogoS} alt="logo" />
-            <img className="sub-logo" src={LogoSubtitle} alt="ali" />
         </Link>
         <nav className={showNav ? 'mobile-show' : ''}>
             <NavLink 
