@@ -15,9 +15,9 @@
 
 .logo img {
     width: auto;
-    height: 40px;
+    height: 90px;
     margin: 0;
-    padding-left: 20px;
+    padding-left: 10px;
 }
 
 nav {
@@ -30,14 +30,15 @@ nav {
     a {
         font-size: 16px;
         color: black;
-        padding: 0 15px;
+        padding: 30px;
         line-height: 80px;
         height: 80px;
         text-decoration: none;
         display: inline-flex;
         align-items: center;
+        position: relative;
         i {
-            transition: all 0.15s ease-out;
+            transition: all 0.3s ease-out;
         }
 
         &:hover {
@@ -52,19 +53,29 @@ nav {
             }
         }
 
-        &::after {
-            content: attr(data-text);
+        &:after {
+            content: '';
             font-size: 9px;
             letter-spacing: 2px;
             position: absolute;
             bottom: 0;
+            display: block;
             width: 100%;
             text-align: center;
             opacity: 0;
+            -webkit-transition: all 0.3s ease-out;
             transition: opacity 0.3s ease-out;
+            left: 5%;
         }
 
-        a.about-link {
+        &:first-child {
+            &:after {
+            content: 'HOME';
+            }
+        }
+    }
+
+     a.about-link {
             &:after {
                 content: 'ABOUT';
             }
@@ -86,7 +97,6 @@ nav {
                 color: #3a4920;;
             }
         }
-    }
 }
 
 ul {

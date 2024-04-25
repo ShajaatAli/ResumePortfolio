@@ -1,5 +1,4 @@
-import React from 'react';
-import Git from './git';
+import './projects.scss'
 
 const Projects = () => {
     return (

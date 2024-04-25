@@ -1,6 +1,25 @@
-import './index.scss'
+import './contact.scss'
+import emailjs from '@emailjs/browser'
+import { useRef } from 'react'
 
 const Contact = () => {
+   const form = useRef()
+
+    const sendEmail = (e) => {
+    e.preventDefault()
+
+    emailjs
+      .sendForm('gmail', 'template_YeJhZkgb', form.current, 'your-token')
+      .then(
+        () => {
+          alert('Message successfully sent!')
+          window.location.reload(false)
+        },
+        () => {
+          alert('Failed to send the message, please try again')
+        }
+      )
+  }
 
     return (
     <>
@@ -28,7 +47,7 @@ const Contact = () => {
               <div class="app-contact">CONTACT INFO : 916-519-6783</div>
             </div>
             <div class="screen-body-item">
-              <div class="app-form">
+              <form ref={form} onSubmit={sendEmail} class="app-form">
                 <div class="app-form-group">
                   <input class="app-form-control" placeholder="NAME" value="Shajaat Ali"/>
                 </div>
@@ -45,7 +64,7 @@ const Contact = () => {
                   <button class="app-form-button">CANCEL</button>
                   <button class="app-form-button">SEND</button>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>

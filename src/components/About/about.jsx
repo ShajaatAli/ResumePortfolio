@@ -1,4 +1,4 @@
-import './index.scss'
+import './about.scss'
 import shajaat from '../../assets/images/shajaat_cat.png'
 
 const About = () => {

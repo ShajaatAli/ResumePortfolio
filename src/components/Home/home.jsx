@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Loader from 'react-loaders';
-import AnimatedLetters from '../AnimatedLetters';
-import './index.scss';
+import AnimatedLetters from '../AnimatedLetters/animatedLetters';
+import './home.scss';
 import anime from 'animejs';
+import shajaat from '../../assets/images/shajaatsuit.jpg'
 
 const StarrySky = () => {
     const numStars = 60;
@@ -99,6 +100,7 @@ const Home = () => {
                     </h2>
 
                 </div>
+                <div className="image-zone"> <img className="shajaat" src={shajaat}alt="Shajaat in suit"/></div>
             </div>
             <Loader type="pacman" />
         </>

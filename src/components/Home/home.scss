@@ -1,24 +1,30 @@
 .container{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 3vw;
+  height: 100vh;
+
     .text-zone{
-        position: relative;
-        top: 10%;
-        left: 10%;
-        width: 60%;
+      position: relative;
+        width: 40%;
         max-height: 90%;
-        z-index: 2
+        z-index: 2;
+        padding: 20px;
     }
     h1{
-        color:black;
-        font-size: 50px;
+        color:#000;
+        font-size: 2.5rem;
         margin: 0;
         font-family: 'Coolvetica';
         font-weight: 400;
     }
     h2{
-        color: rgb(22, 24, 30);
-        margin-top: 0;
+        color: rgb(22,24,30,0.8);
+        margin-top: 10px;
         font-weight: 400;
-        font-size: 30px;
+        font-size: 1.5rem;
         font-family: 'Coolvetica';
         letter-spacing: 1px;
         animation: fadeIn 1s 1.8s backwards;
@@ -26,6 +32,7 @@
 
     .flat-button{
 
+        display: block;
         color: rgb(37, 33, 33);
         font-size: 13px;
         font-weight: 400;
@@ -33,20 +40,36 @@
         font-family: sans-serif;
         text-decoration: none;
         padding: 10px 10px;
-        margin: 0;
-        margin-top: 2%;
+        margin: 0 auto;
+        margin-top: 20px;
         border: 1px solid rgb(37, 33, 33) ;
-        float: left;
         animation: fadeInAnimation 1s 1.8s backwards;
         white-space: nowrap;
         margin-left: 0px;
-        bottom: 70%;
+        bottom: auto;
+        position: relative;
+        top: 10px;
 
         &:hover {
         background: #5c5a53;
         color: #333;
         }
     }
+
+    .image-zone {
+    align-self: center;
+    width: 50%; /* Set the width for the image container */
+    height: 90%; /* Set a height, adjust as needed */
+    position: relative; /* Position relative to align within the container */
+    z-index: 2; /* Same stacking context as text-zone */
+    margin-top: 20px;
+  } 
+
+  .image-zone img {
+  display: block; 
+  margin-top: 90px; 
+  margin-left: 40px;
+}
     
 }
 
