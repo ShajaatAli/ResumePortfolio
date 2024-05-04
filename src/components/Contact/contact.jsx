@@ -1,79 +1,53 @@
-import './contact.scss'
-import emailjs from '@emailjs/browser'
-import { useRef } from 'react'
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-   const form = useRef()
+    const form = useRef();
 
     const sendEmail = (e) => {
-    e.preventDefault()
+        e.preventDefault();
 
-    emailjs
-      .sendForm('gmail', 'template_YeJhZkgb', form.current, 'your-token')
-      .then(
-        () => {
-          alert('Message successfully sent!')
-          window.location.reload(false)
-        },
-        () => {
-          alert('Failed to send the message, please try again')
-        }
-      )
-  }
+        emailjs
+            .sendForm('gmail', 'template_YeJhZkgb', form.current, 'your-token')
+            .then(
+                () => {
+                    alert('Message successfully sent!');
+                    window.location.reload(false);
+                },
+                () => {
+                    alert('Failed to send the message, please try again');
+                }
+            );
+    };
 
     return (
-    <>
-    <div class="background">
-      <div class="container">
-        <div class="screen">
-          <div class="screen-header">
-            <div class="screen-header-left">
-              <div class="screen-header-button close"></div>
-              <div class="screen-header-button maximize"></div>
-              <div class="screen-header-button minimize"></div>
+        <div className="h-screen flex z-10">
+            <div className="m-auto w-full max-w-xl bg-neutral-700 rounded-2xl shadow-xl z-10 h-[300px] ">
+                <div className="space-x-1 h-8 flex justify-start bg-zinc-600 rounded-2xl pt-3 pl-5">
+                        <span className="block w-2 h-2 bg-red-500 rounded-full"></span>
+                        <span className="block w-2 h-2 bg-yellow-300 rounded-full"></span>
+                        <span className="block w-2 h-2 bg-green-500 rounded-full"></span>
+                </div>
+                <div className="grid grid-cols-2 justify-between items-center mt-5 mb-5 ml-9">
+                    <div className="text-left">
+                        <h1 className="text-xl text-stone-900 font-bold mb-1 underline">CONTACT ME</h1>
+                        <p className="text-gray-400 mt-11 text-xs">Contact Number : 916-519-6783</p>
+                    </div>
+
+                    <form ref={form} onSubmit={sendEmail} className="space-y-5">
+                    <input className="bg-transparent border-b-2 border-gray-600 text-white placeholder-gray-500 focus:outline-none focus:border-green-500" placeholder="NAME"  />
+                    <input className="bg-transparent border-b-2 border-gray-600 text-white placeholder-gray-500 focus:outline-none focus:border-green-500" placeholder="EMAIL" />
+                    <input className="bg-transparent border-b-2 border-gray-600 text-white placeholder-gray-500 focus:outline-none focus:border-green-500" placeholder="CONTACT NO" />
+                    <input className="bg-transparent border-b-2 border-gray-600 text-white placeholder-gray-500 focus:outline-none focus:border-green-500" placeholder="MESSAGE" />
+                    <input className="bg-transparent" placeholder='' disabled/>
+                    <button type="submit" className="px-4 py-2  text-green-500 hover:bg-green-500 hover:text-white">SEND</button>
+                    </form>
+                    
+                </div>
+                
             </div>
-            <div class="screen-header-right">
-              <div class="screen-header-ellipsis"></div>
-              <div class="screen-header-ellipsis"></div>
-              <div class="screen-header-ellipsis"></div>
-            </div>
-          </div>
-          <div class="screen-body">
-            <div class="screen-body-item left">
-              <div class="app-title">
-                <span>CONTACT</span>
-                <span>ME</span>
-              </div>
-              <div class="app-contact">CONTACT INFO : 916-519-6783</div>
-            </div>
-            <div class="screen-body-item">
-              <form ref={form} onSubmit={sendEmail} class="app-form">
-                <div class="app-form-group">
-                  <input class="app-form-control" placeholder="NAME" value="Shajaat Ali"/>
-                </div>
-                <div class="app-form-group">
-                  <input class="app-form-control" placeholder="EMAIL"/>
-                </div>
-                <div class="app-form-group">
-                  <input class="app-form-control" placeholder="CONTACT NO"/>
-                </div>
-                <div class="app-form-group message">
-                  <input class="app-form-control" placeholder="MESSAGE"/>
-                </div>
-                <div class="app-form-group buttons">
-                  <button class="app-form-button">CANCEL</button>
-                  <button class="app-form-button">SEND</button>
-                </div>
-              </form>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
+    );
+};
 
-    </>
-  )
-  
-} 
-
-export default Contact
+export default Contact;
