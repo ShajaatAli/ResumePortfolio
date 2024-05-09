@@ -4,7 +4,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 function ProjectCard({ title, description, technologies, image, githubLink }) {
   return (
-    <div className="project-card-container bg-gray-800 text-white p-4 rounded-lg shadow-lg mb-3">
+    <div className="project-card-container bg-gray-800 text-white p-4 rounded-lg shadow-lg mb-3 md:w-7/8 max-w-xl h-auto md:h-[300px] py-5 md:py-0">
       {image && <img src={image} alt={title} className="rounded-t-lg" />}
       <div className="p-4">
         <h3 className="text-xl font-bold">{title}</h3>
@@ -26,10 +26,10 @@ function ProjectCard({ title, description, technologies, image, githubLink }) {
   );
 }
 
-function projectPages({ projects }) {
+function ProjectPages({ projects }) {
   return (
-    <div className="p-4  min-h-screen">
-      <div className="flex flex-col items-center p-2">
+    <div className="p-4 min-h-screen">
+      <div className="flex flex-col items-center space-y-4">
         {projects.map(project => (
           <ProjectCard key={project.id} {...project} />
         ))}
@@ -38,5 +38,5 @@ function projectPages({ projects }) {
   );
 }
 
-export default projectPages;
+export default ProjectPages;
 

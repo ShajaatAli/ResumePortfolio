@@ -10,21 +10,21 @@ const Home = () => {
     const nameArray = ['S', 'h', 'a', 'j', 'a', 'a', 't', ' ', 'A', 'l', 'i'];
 
     return (
-        <div className="flex justify-around items-center p-[3vw] h-screen ml-10">
-            <div className="relative w-2/5 max-h-[90%] z-10 p-5">
-                <h1 className="text-black text-7xl m-0 font-[Coolvetica] font-bold">
+        <div className="flex flex-col md:flex-row justify-around items-center p-[3vw] h-screen ml-10">
+            <div className="flex flex-col justify-center items-start md:items-center text-center md:text-left">
+                <h1 className="text-black md:text-7xl text-5xl m-0 font-[Coolvetica] font-bold">
                     <span className={letterClass}>H</span>
                     <span className={letterClass}>e</span>
                     <span className={letterClass}>l</span>
                     <span className={letterClass}>l</span>
                     <span className={`${letterClass} _13`}>o,</span>
-                    <br />
-                    <span className={`${letterClass} _14`}>I</span>
+                    <span className={`${letterClass} _14`}> I</span>
                     <span className={`${letterClass} _15`}>'m </span>
+                    <br />
                     <AnimatedLetters letterClass={letterClass} strArray={nameArray} idx={15} />
                     <br />
                 </h1>
-                <h2 className="text-black mt-2.5 text-4xl font-[Coolvetica] tracking-wide font-bold">
+                <h2 className="text-black mt-2.5 md:text-4xl text-2xl font-[Coolvetica] tracking-wide font-bold">
                     Computer Science Major / Exercise & Health Advocate
                 </h2>
                 <h3>
@@ -33,8 +33,8 @@ const Home = () => {
                     </Link>
                 </h3>
             </div>
-            <div className="self-center w-1/2 h-[100%] relative z-10">
-                <img className="block ml-10 transform scale-75" src={shajaat} alt="Shajaat in suit"/>
+            <div className="ml-10 flex justify-center items-center max-w-xs md:max-w-sm lg:max-w-md">
+                <img className="w-full transform scale-75 md:scale-90 lg:scale-100" src={shajaat} alt="Shajaat in suit"/>
             </div>
             <Loader type="pacman" />
         </div>
