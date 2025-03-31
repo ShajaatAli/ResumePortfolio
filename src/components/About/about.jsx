@@ -13,8 +13,7 @@ const About = () => {
             <h2 className="text-xl md:text-4xl text-black m-1 font-[Coolvetica] font-normal">
               I am a first generation college student. I am very passionate about working out, traveling, and just enjoying life.
               I am currently a Computer Science Student at California State University, Sacramento
-              with my graduation being December 2024. I am currently looking to get into front end software development
-              but I am also willing to go down any other route as long as I can keep learning.
+              with my graduation being May 2025. 
             </h2>
           </div>
         </div>

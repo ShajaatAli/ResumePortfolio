@@ -8,14 +8,20 @@ const Contact = () => {
         e.preventDefault();
 
         emailjs
-            .sendForm('gmail', 'template_YeJhZkgb', form.current, 'your-token')
+            .sendForm(
+                'service_6678j8v', // Replace with your EmailJS service ID
+                'template_sx38cvc', // Replace with your EmailJS template ID
+                form.current,
+                '6iFsLxS8QGClNrbep' // Replace with your EmailJS public key
+            )
             .then(
                 () => {
                     alert('Message successfully sent!');
-                    window.location.reload(false);
+                    form.current.reset();
                 },
-                () => {
+                (error) => {
                     alert('Failed to send the message, please try again');
+                    console.log(error.text);
                 }
             );
     };
@@ -31,24 +37,40 @@ const Contact = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 justify-between items-center mt-5 mb-5 mx-4 md:ml-9">
                 <div className="text-left mb-5 md:mb-0">
                     <h1 className="text-lg md:text-xl text-stone-900 font-bold mb-1 underline">CONTACT ME</h1>
-                    <p className="text-gray-400 text-xs">Contact Number : 916-519-6783</p>
                 </div>
 
                 <form ref={form} onSubmit={sendEmail} className="space-y-3">
-                <input className="bg-transparent border-b-2 border-gray-600 text-white placeholder-gray-500 focus:outline-none focus:border-green-500" placeholder="NAME"  />
-                <input className="bg-transparent border-b-2 border-gray-600 text-white placeholder-gray-500 focus:outline-none focus:border-green-500" placeholder="EMAIL" />
-                <input className="bg-transparent border-b-2 border-gray-600 text-white placeholder-gray-500 focus:outline-none focus:border-green-500" placeholder="CONTACT NO" />
-                <input className="bg-transparent border-b-2 border-gray-600 text-white placeholder-gray-500 focus:outline-none focus:border-green-500" placeholder="MESSAGE" />
-                <input className="bg-transparent" placeholder='' disabled/>
-                <button type="submit" className="px-4 py-2  text-green-500 hover:bg-green-500 hover:text-white">SEND</button>
+                    <input 
+                        type="text"
+                        name="user_name"
+                        className="bg-transparent border-b-2 border-gray-600 text-white placeholder-gray-500 focus:outline-none focus:border-green-500 w-full" 
+                        placeholder="NAME" 
+                        required
+                    />
+                    <input 
+                        type="email"
+                        name="user_email"
+                        className="bg-transparent border-b-2 border-gray-600 text-white placeholder-gray-500 focus:outline-none focus:border-green-500 w-full" 
+                        placeholder="EMAIL" 
+                        required
+                    />
+                    <textarea 
+                        name="message"
+                        className="bg-transparent border-b-2 border-gray-600 text-white placeholder-gray-500 focus:outline-none focus:border-green-500 w-full resize-none" 
+                        placeholder="MESSAGE" 
+                        required
+                    />
+                    <button 
+                        type="submit" 
+                        className="px-4 py-2 text-green-500 hover:bg-green-500 hover:text-white transition-colors duration-200"
+                    >
+                        SEND
+                    </button>
                 </form>
-                
             </div>
-            
         </div>
     </div>
 );
-
 };
 
 export default Contact;
