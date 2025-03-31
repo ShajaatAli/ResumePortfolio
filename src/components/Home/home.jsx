@@ -10,31 +10,44 @@ const Home = () => {
     const nameArray = ['S', 'h', 'a', 'j', 'a', 'a', 't', ' ', 'A', 'l', 'i'];
 
     return (
-        <div className="flex flex-col md:flex-row justify-around items-center p-[3vw] h-screen ml-10">
-            <div className="flex flex-col justify-center items-start md:items-center text-center md:text-left">
-                <h1 className="text-black md:text-7xl text-5xl m-0 font-[Coolvetica] font-bold">
-                    <span className={letterClass}>H</span>
-                    <span className={letterClass}>e</span>
-                    <span className={letterClass}>l</span>
-                    <span className={letterClass}>l</span>
-                    <span className={`${letterClass} _13`}>o,</span>
-                    <span className={`${letterClass} _14`}> I</span>
-                    <span className={`${letterClass} _15`}>'m </span>
-                    <br />
-                    <AnimatedLetters letterClass={letterClass} strArray={nameArray} idx={15} />
-                    <br />
-                </h1>
-                <h2 className="text-black mt-2.5 md:text-4xl text-2xl font-[Coolvetica] tracking-wide font-bold">
-                    Computer Science Major / Exercise & Health Advocate
-                </h2>
-                <h3>
-                    <Link to="/contact" className='inline-block text-black text-lg font-[Coolvetica] font-semibold tracking-wider no-underline px-1 py-0.5 my-auto mx-auto border border-solid border-[rgb(37,33,33)] hover:bg-[#5c5a53] hover:text-[#333] relative top-2.5 whitespace-nowrap'>
-                        CONTACT ME
-                    </Link>
-                </h3>
-            </div>
-            <div className="ml-10 flex justify-center items-center max-w-xs md:max-w-sm lg:max-w-md">
-                <img className="w-full transform scale-75 md:scale-90 lg:scale-100" src={shajaat} alt="Shajaat in suit"/>
+        <div className="relative min-h-screen flex items-center justify-center">
+            <div className="container mx-auto px-4">
+                <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16">
+                    <div className="flex-1 text-center">
+                        <h1 className="text-5xl md:text-7xl font-[Coolvetica] font-bold mb-4 text-black">
+                            <span className={letterClass}>H</span>
+                            <span className={letterClass}>e</span>
+                            <span className={letterClass}>l</span>
+                            <span className={letterClass}>l</span>
+                            <span className={`${letterClass} _13`}>o,</span>
+                            <span className={`${letterClass} _14`}> I</span>
+                            <span className={`${letterClass} _15`}>'m </span>
+                            <br />
+                            <AnimatedLetters letterClass={letterClass} strArray={nameArray} idx={15} />
+                        </h1>
+                        <h2 className="text-2xl md:text-4xl font-[Coolvetica] text-black mb-8">
+                            Computer Science Major / Exercise & Health Advocate
+                        </h2>
+                        <div className="flex justify-center">
+                            <Link 
+                                to="/contact" 
+                                className='inline-flex items-center justify-center px-6 py-3 text-lg font-[Coolvetica] font-semibold text-white bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors duration-300'
+                            >
+                                CONTACT ME
+                            </Link>
+                        </div>
+                    </div>
+                    <div className="flex-1 flex justify-center items-center">
+                        <div className="relative w-64 md:w-80 lg:w-96">
+                            <div className="absolute inset-0 bg-green-500 rounded-full filter blur-3xl opacity-20"></div>
+                            <img 
+                                className="relative w-full rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-300" 
+                                src={shajaat} 
+                                alt="Shajaat in suit"
+                            />
+                        </div>
+                    </div>
+                </div>
             </div>
             <Loader type="pacman" />
         </div>
