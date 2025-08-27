@@ -38,8 +38,7 @@ const About = () => {
     {
       title: 'Computer Science Student',
       institution: 'California State University, Sacramento',
-      period: '2021 - 2025',
-      description: 'Expected graduation: May 2025'
+      period: 'Aug 2019 - May 2025',
     }
   ];
 
@@ -65,10 +64,9 @@ const About = () => {
             <h1 className="text-5xl md:text-7xl font-[Coolvetica] font-bold text-gray-900 dark:text-white mb-6">
               About Me
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
+            <p className="text-xl text-black-600 dark:text-black-300 mb-8">
               I am a first generation college student passionate about technology, fitness, and life experiences. 
-              Currently pursuing Computer Science at California State University, Sacramento with an expected 
-              graduation in May 2025.
+              Recently finished my B.S. in Computer Science at California State University, Sacramento in May 2025.
             </p>
             <div className="flex justify-center md:justify-start space-x-4">
               <a href="https://github.com/shajaatali" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">

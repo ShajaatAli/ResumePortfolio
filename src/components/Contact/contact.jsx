@@ -61,7 +61,7 @@ const Contact = () => {
                                 <div className="flex items-center space-x-4">
                                     <FontAwesomeIcon icon={faEnvelope} className="text-green-500 text-xl" />
                                     <a href="mailto:shajaatali@csus.edu" className="text-gray-600 dark:text-gray-300 hover:text-green-500 transition-colors">
-                                        shajaatali@csus.edu
+                                        shajaatali20@gmail.com
                                     </a>
                                 </div>
                                 
